@@ -218,14 +218,6 @@ a {
   left: 7px;
 }
 
-.piano-key.letter::before {
-  display: none;
-}
-
-.piano-key.letter::after {
-  display: block;
-}
-
 .piano-key-letter::before {
   content: attr(data-letter);
 }
