@@ -61,9 +61,9 @@ const toggleFullscreen = () => {
 };
 
 const playAudio = (event) => {
-  const key =
-    event.target.closest('.piano-key') ||
-    document.querySelector(`[data-letter="${event.code?.slice(3)}"]`);
+  const key = event.code
+    ? document.querySelector(`[data-letter="${event.code.slice(3)}"]`)
+    : event.target.closest('.piano-key');
   if (!key || key.classList.contains('piano-key-active')) return;
   key.classList.add('piano-key-active');
 
